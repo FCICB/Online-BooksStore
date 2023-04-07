@@ -1,6 +1,4 @@
-//
-// Created by maza on 02/04/2023.
-//
+
 
 #ifndef ONLINE_BOOKSTORE_INVENTORY_H
 #define ONLINE_BOOKSTORE_INVENTORY_H

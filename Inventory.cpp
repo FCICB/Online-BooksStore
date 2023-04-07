@@ -1,6 +1,4 @@
-//
-// Created by maza on 02/04/2023.
-//
+
 #include <bits/stdc++.h>
 #include "Inventory.h"
 #include <fstream>

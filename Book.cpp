@@ -1,6 +1,4 @@
-//
-// Created by maza on 02/04/2023.
-//
+
 
 #include "Book.h"
 #include <string.h>
