@@ -98,6 +98,7 @@ void ShoppingCart::removeBookFromUserCart()
         cout<<"\nYOUR SHOPPING CART IS EMPTY,THERE IS NOT BOOKS TO REMOVE !"<<endl;
 
 }
+
 vector<Book> ShoppingCart::getCart()
 {
     return cart;

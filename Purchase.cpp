@@ -8,6 +8,7 @@
 
 using namespace std;
 
+
 void Purchase::checkout(User user,ShoppingCart shopCart)
 {
     vector<Book> cart;

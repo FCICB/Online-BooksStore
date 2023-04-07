@@ -14,7 +14,7 @@ class Purchase
         void displayEntirePurchaseHistory();
         void displayPurchaseDetails();
         //vector<Book> getInventoryBooks();
-
+        
     private:
         char userName[40];
         char userAddrees[40];

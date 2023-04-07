@@ -12,7 +12,6 @@ class ShoppingCart
     private:
         vector<Book>cart;
         //double totalPrice;
-
 };
 
 #endif // SHOPPINGCART_H

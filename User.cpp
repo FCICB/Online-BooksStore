@@ -12,6 +12,7 @@ using namespace  std;
 void User::setName(char* name){
     strcpy(UserName,name);
 }
+
 char* User::getName(){
     return UserName;
 }
