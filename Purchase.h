@@ -10,11 +10,9 @@ class Purchase
         void checkout(User user,ShoppingCart shoppingCart);
         double getTotalPrice(ShoppingCart);
         void addPurchaseToPurchaseHistory();
-        //void loadPurchasefromPurchaseHistory();
         void displayEntirePurchaseHistory();
         void displayPurchaseDetails();
-        //vector<Book> getInventoryBooks();
-        
+
     private:
         char userName[40];
         char userAddrees[40];

@@ -19,7 +19,6 @@ void Purchase::checkout(User user,ShoppingCart shopCart)
     if(totalPrice == 0)
     {
         cout<<"\nYOUR SHOPPING CART IS EMPTY !"<<endl;
-        //exit(0);
         return;
     }
     time_t now = time(0);
@@ -33,8 +32,8 @@ void Purchase::checkout(User user,ShoppingCart shopCart)
     }
     cout<<"\n\nTotalPrice Is : "<<totalPrice<<endl;
     cout<<"\nDate Is :"<<date<<endl;
-    addPurchaseToPurchaseHistory();//to record any purchase in our system.
-    cart.clear();//to make cart empty after purchase.
+    addPurchaseToPurchaseHistory();
+    cart.clear();
 }
 double Purchase::getTotalPrice(ShoppingCart shopCart)
 {
@@ -54,7 +53,7 @@ void Purchase::addPurchaseToPurchaseHistory()
     purchase=*this;
     fstream purchaseFile;
     purchaseFile.open("purchase.txt",ios::out|ios::app);
-    if(!purchaseFile)   // file couldn't be opened
+    if(!purchaseFile)   
     {
         cerr << "Error: file purchase could not be opened" << endl;
     }
@@ -73,11 +72,11 @@ void Purchase::displayEntirePurchaseHistory()
     Purchase purchase;
     fstream purchaseFile;
     purchaseFile.open("purchase.txt",ios::in);
-    if(!purchaseFile)   // file couldn't be opened
+    if(!purchaseFile)   
     {
         cerr << "Error: file could not be opened" << endl;
     }
-    int flag=0;//to check if there is books in cart.
+    int flag=0;
     while(purchaseFile.read((char*)&purchase, sizeof(purchase)))
     {
         flag=1;

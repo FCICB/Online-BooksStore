@@ -11,7 +11,6 @@ class ShoppingCart
         vector<Book> getCart();
     private:
         vector<Book>cart;
-        //double totalPrice;
 };
 
-#endif // SHOPPINGCART_H
+#endif 

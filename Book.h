@@ -7,7 +7,6 @@ using namespace  std;
 class Book
 {
 public:
-    //setter and getter functions
     char* getTitle() ;
     void setTitle(char* title);
     char* getAuthor() ;
@@ -19,8 +18,7 @@ public:
     double getPrice() ;
     void setPrice(double price);
 
-    //function display book details;
-
+    
     void displayBookDetails();
     void ctreateBook();
 
@@ -36,4 +34,4 @@ private:
 };
 
 
-#endif //ONLINE_BOOKSTORE_BOOK_H
+#endif 

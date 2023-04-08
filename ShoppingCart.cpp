@@ -23,7 +23,6 @@ void ShoppingCart::addBookToCart()
     cin.getline(title,40);
 
     cout<<"\nEnter author of book : \n";
-    //cin.ignore();
     cin.getline(author,40);
 
     if(inventory.isExist(title,author) == true)
@@ -48,7 +47,7 @@ void ShoppingCart::addBookToCart()
 
 void ShoppingCart::displayUserCart()
 {
-    int flag=0;//to handle if cart is empty
+    int flag=0;
     for(int i=0; i<cart.size(); i++)
     {
         flag=1;
@@ -62,7 +61,7 @@ void ShoppingCart::displayUserCart()
 
 void ShoppingCart::removeBookFromUserCart()
 {
-    if(cart.size() != 0)//to handle if cart empty
+    if(cart.size() != 0)
     {
         Inventory inventory;
         char title[40];

@@ -16,7 +16,7 @@ void Inventory::addBookToInventory()
     fstream inventoryFile;
     Book book;
     inventoryFile.open("inventory.txt",ios::out|ios::app);
-    if(!inventoryFile)   // file couldn't be opened
+    if(!inventoryFile)   
     {
         cerr << "\nError: file could not be opened" << endl;
 
@@ -39,7 +39,6 @@ void Inventory::addBookToInventory()
         if(!inventoryFile)
         {
             cerr << "\nCould not write to file\n";
-            // exit(1);
         }
         cout <<"\nThis book has been added to inventory successfully \n"<<endl;
     }
@@ -62,10 +61,9 @@ void Inventory::deleteBookFromInventory()
     if(isExist(title,author))
     {
         tempFile.open("temp.txt",ios::out);
-        if(!tempFile)   // file couldn't be opened
+        if(!tempFile)   
         {
             cerr << "Error: file could not be opened" << endl;
-            // exit(1);
         }
         loadBookfromInventory();
         for(int i=0; i<readingInventoryBooks.size(); i++)
@@ -94,10 +92,10 @@ void Inventory::loadBookfromInventory()
     fstream inventoryFile;
     Book book;
     inventoryFile.open("inventory.txt",ios::in);
-    if(!inventoryFile)   // file couldn't be opened
+    if(!inventoryFile)   
     {
         cerr << "Error: file could not be opened" << endl;
-        //exit(1);
+      
     }
     while(inventoryFile.read((char*)&book, sizeof(book)))
     {
@@ -161,23 +159,4 @@ vector<Book> Inventory::getInventoryBooks()
     loadBookfromInventory();
     return readingInventoryBooks;
 }
-
-//int Inventory::getIndexOfExistingBook(char* title,char* author)
-//{
-//    int flag=0;
-//    vector<Book>allBooks;
-//    allBooks=getInventoryBooks();
-//    for(int i=0; i<allBooks.size(); i++)
-//    {
-//        if((strcmp(allBooks[i].getTitle(),title)==0) && (strcmp(allBooks[i].getAuthor(),author)==0))
-//        {
-//            flag=1;
-//            return i;
-//            break;
-//        }
-//        if(flag==0)
-//            return -1;
-//    }
-//}
-//
 

@@ -15,10 +15,10 @@ class User
         char* getName();
         void setAddress(char* address);
         char* getAddress();
-        
+
     private:
         char UserName[30];
         char UserAddress[30];
 };
 
-#endif // USER_H
+#endif 

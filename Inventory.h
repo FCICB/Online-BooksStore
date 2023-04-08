@@ -20,9 +20,8 @@ public:
     void sortBooksByPrice();
     vector<Book> getInventoryBooks();
 private:
-   //vector<Book>addingInventoryBooks;
    vector<Book>readingInventoryBooks;
 };
 
 
-#endif //ONLINE_BOOKSTORE_INVENTORY_H
+#endif 
